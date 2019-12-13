@@ -1,0 +1,901 @@
+/*
+  Theme Name: Havilah & Hills Theme
+  Author: Michael
+*/
+
+body{
+    background-color: #F0F3F2;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*--------------------------
+     Header
+---------------------------*/
+#header {
+  height: 90px;
+  padding: 20px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+  background-color: #F0F3F2;
+  padding-bottom:10px;
+  }
+
+#header.header-scrolled,
+#header.header-fixed {
+  background: #F0F3F2;
+  height: 70px;
+  padding: 15px 0;
+  /* padding-bottom: 100px; */
+  /* transition: all 0.5s; */
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Nav Menu Essentials */
+
+.nav-menu,
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-menu .menu-active {
+    border-bottom: 4px solid  #038BB4;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu>li {
+  float: left;
+}
+
+.nav-menu li:hover>ul,
+.nav-menu li.sfHover>ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+/* Nav Menu Arrows */
+
+.sf-arrows .sf-with-ul {
+    padding-right: 30px;
+  }
+  
+  .sf-arrows .sf-with-ul:after {
+    content: "\f107";
+    position: absolute;
+    right: 15px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  .sf-arrows ul .sf-with-ul:after {
+    content: "\f105";
+  }
+
+  /* Nav Meu Container */
+
+#nav-menu-container {
+    float: right;
+    margin: 0;
+  }
+  
+  /* Nav Meu Styling */
+  
+  .nav-menu a {
+    padding: 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: #038BB4;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    outline: none;
+  }
+  .nav-menu .menu-active a,
+.nav-menu a:hover {
+    font-weight: bold;
+    font-size: 14px;
+  color: #038BB4; 
+}
+
+.nav-menu a:hover:before,
+.nav-menu li:hover>a:before,
+.nav-menu .menu-active>a:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.nav-menu li.ExecuteProject a {
+    color: #038BB4;
+    background: none;
+    padding: 7px 22px;
+    border-radius: 7px;
+    border: 2px solid #038BB4;
+    transition: all ease-in-out 0.3s;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-top: 2px;
+    line-height: 1;
+    font-size: 13px;
+  }
+
+  .nav-menu li.ExecuteProject a:hover {
+    background: #E5E5E5;
+    font-weight: bold;
+    font-size: 14px;
+  color: #038BB4; 
+}
+
+  .nav-menu li.ExecuteProject:hover a:before,
+.nav-menu li.ExecuteProject.menu-active a:before {
+  visibility: hidden;
+}
+
+.nav-menu ul ul {
+    margin: 0;
+  }
+
+  /* Mobile Nav Toggle */
+#mobile-nav header{
+  background-color: #F0F3F2;
+}
+#mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: 15px 15px 0 0;
+    border: 0;
+    background: none;
+    font-size: 20px;
+    display: none;
+    transition: all 0.4s;
+    outline: none;
+    cursor: pointer;
+    padding-top: 7px;
+    padding-left: 80px;
+  }
+  
+  #mobile-nav-toggle i {
+    color: #038BB4;
+  }
+
+  /* Mobile Nav Styling */
+
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    padding-top: 18px;
+    bottom: 0;
+    z-index: 998;
+    /* background: rgba(252, 243, 211, .8); rgba(252, 243, 211, .9) transparent */
+    left: -260px;
+    width: 260px; /* changes to still be made concering the mobile view background */
+    overflow-y: auto;
+    transition: 0.4s;
+    
+  }
+
+
+
+  #mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  #mobile-nav ul li {
+    position: relative;
+  }
+
+  #mobile-nav ul li {
+    position: relative;
+  }
+  
+  #mobile-nav ul li a {
+    color: #038BB4;
+    font-size: 17px;
+    overflow: hidden;
+    padding: 10px 22px 10px 105px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    outline: none;
+    text-align: center;
+  }
+  #mobile-nav > ul li.ExecuteProject a {
+    color: #038BB4;
+    background: none;
+    /* padding: 7px 0px; */
+     padding: 7px 12px 10px 105px;
+    border-radius: 7px;
+    border: 2px solid #038BB4;
+    /* transition: all ease-in-out 0.3s; */
+    /* font-weight: 500; */
+    /* margin-left: 8px; */
+    margin-top: 2px;
+    /* line-height: 1; */
+    font-size: 13px;
+  }
+  
+  #mobile-nav ul li a:hover {
+    color: #3D4295; 
+  }
+  
+  #mobile-nav ul li li {
+    padding-left: 30px;
+  }
+  
+  #mobile-nav ul .menu-has-children i {
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  #mobile-nav ul .menu-has-children i.fa-chevron-up {
+    color: #3D4295; 
+  }
+  
+  #mobile-nav ul .menu-active {
+    color: #3D4295; 
+  }
+  
+  #mobile-body-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(252, 243, 211, .8);
+    display: none;
+  }
+  
+  /* Mobile Nav body classes */
+  
+  body.mobile-nav-active {
+    overflow: hidden;
+  }
+  
+  body.mobile-nav-active #mobile-nav {
+    left: 0;
+  }
+  
+  body.mobile-nav-active #mobile-nav-toggle {
+    color: #fff;
+  }
+
+
+/* =================================
+    HERO section
+================================= */
+#hero {
+
+/* Use "linear-gradient" to add a darken background */
+background-image: linear-gradient(rgba(59, 220, 242, 0.5), rgba(59, 220, 242, 0.5)), url("../img/hero-background.png");
+  
+/* Set a specific height */
+height: 100vh;
+/* width: 100%; */
+  
+/* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* #hero:before {
+    content: "";
+    background: rgba(59, 220, 242, 0.5);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  } */
+  
+/* Place text in the left of the image */
+  #hero h5 {
+    color: #fff;
+    font-family:'Ubuntu', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    line-height:130%;
+  }
+  .hero-text {
+    font-family:'Ubuntu', sans-serif;
+    text-align: left;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 200;
+    line-height:130%;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #FCF3D3;
+  }
+
+  .learnmore{
+    color: #038BB4;
+    background: #FCF3D3;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    border: 2px solid #FCF3D3;
+    border-radius: 10px;
+    text-transform: uppercase;
+  }
+
+  a.learnmore:hover {
+    background: #FCF3D3;
+    font-weight: bold;
+    font-size: 20px;
+  color: #038BB4; 
+}
+
+
+
+
+/* =======================
+HERO ABOUT
+======================= */
+
+#hero-about {
+
+  /* Use "linear-gradient" to add a darken background */
+  background-image: linear-gradient(rgba(59, 220, 242, 0.5), rgba(59, 220, 242, 0.5)), url("../img/hero-background.png");
+    
+  /* Set a specific height */
+  height: 70vh;
+    
+  /* Position and center the image to scale nicely on all screens */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    
+  /* Place text in the left of the image */
+    #hero-about h5 {
+      color: #fff;
+      font-family:'Ubuntu', sans-serif;
+      font-size: 40px;
+      font-weight: 200;
+      line-height:130%;
+    }
+    .hero-about-text {
+      font-family:'Ubuntu', sans-serif;
+      text-align: left;
+      position: absolute;
+      font-size: 30px;
+      font-weight: 200;
+      line-height:130%;
+      top: 60%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      color: #FCF3D3;
+    }
+    #about p{
+      padding-left: 100px;
+      text-align: justify;
+    }
+
+  /* Section header Styling */
+    .section-header{
+    padding-top:10px;
+    padding-bottom:30px;
+    text-align: center;
+    color: #038BB4;
+  }
+
+
+  /* Trusted companies section */
+  #companies{
+      padding-top: 5px;
+      padding-bottom:30px;
+      background-color: rgba(252, 243, 211, 1);
+  }
+  #companies h2{
+  text-align: center;
+  color: #038BB4;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+/* #companies .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:#808080;
+    position: relative;
+    left: 50%;
+  }
+  #companies .owl-dot.active {
+    background-color: #3D4295;
+} */
+
+
+#services{
+  padding: 60px 0;
+}
+
+#services h2{
+  /* text-transform: uppercase; */
+  font-size: 36px;
+}
+
+
+#services .services-wrap {
+
+  margin-bottom: 30px;
+}
+
+#services .services-icon {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  
+  overflow: hidden;
+ 
+  height: 160px;
+}
+  
+  .services-icon-text p{
+    font-size:14px;
+    justify-content: center;
+    text-align: center;
+  
+  }
+
+
+ .btn-project {
+    color: #038BB4;
+    /* background: #FCF3D3; */
+    /* padding: 7px 22px; */
+    border-radius: 7px;
+    border: 2px solid #038BB4;
+    
+    font-weight: 500;
+    
+    line-height: 1;
+    font-size: 16px;
+    margin-top: 60px;
+    margin-left: 0;
+  }
+  a.btn-project:hover {
+    /* background: #FCF3D3; */
+    font-weight: bold;
+    font-size: 18px;
+  color: #038BB4; 
+}
+  
+/*--------------------------------------------------------------
+# Subscribe Section
+--------------------------------------------------------------*/
+
+#subscribe {
+  padding: 60px;
+  border: 1px  rgba(252, 243, 211, 0.5);
+  background-image: linear-gradient(rgba(252, 243, 211, 0.5), rgba(252, 243, 211, 0.5)), url("../img/subscribe.png");
+  /* background: url(../img/subscribe.png) center center no-repeat; */
+  /* background-image: linear-gradient rgba(252, 243, 211); */
+  background-size: cover;
+  /* overflow: hidden;
+  position: relative; */
+
+  
+}
+/* #subscribe:before {
+  content: "";
+
+ background: linear-gradient(252, 243, 211, 0.5); 
+  border-radius: 5px rgba(252, 243, 211, 0.5);
+  border:  rgba(252, 243, 211, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+} */
+
+#subscribe h2{
+  color: #FFFFFF;
+  font-size: 40px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+}
+.input{
+  padding:0;
+  margin:0;
+  width: 25%;
+ }
+
+ button{
+  margin:0;
+  padding:0;
+  color: #fff;
+  width: 15%;
+  font-size:18px;
+  font-weight:lighter; 
+  background: #038BB4;
+  border: 1px solid #038BB4;
+ }
+
+
+/*--------------------------------------------------------------
+# Featured project Section
+--------------------------------------------------------------*/
+
+ #featured-project{
+  /* padding: 60px 20px 30px 20px; */
+  background-color: #F0F3F2;
+}
+ 
+ .card{
+  background-color: #F0F3F2;
+  border: none;
+
+}
+.card-project{
+  padding: 30px;
+}
+
+ /* .card-image{
+   width: 100%;
+   height: 100%;
+ } */
+
+
+
+/* #featured-project .card-text{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+} */
+
+.card-text h3 {
+  padding-top: 30px;
+  color: #038BB4;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* .card-text  p {
+  
+  padding-top: 30px;
+  font-size: 12px;
+  text-align: justify;
+ 
+} */
+
+
+.btn-more {
+  padding: 5px 25px;
+  color: #038BB4;
+  background: none;
+  /* padding: 7px 22px; */
+  border-radius: 18px;
+  border: 2px solid #038BB4;
+  
+  font-weight: 500;
+  
+  line-height: 1;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+#see-all-project{
+  background-color: #C4C4C4;
+  padding-bottom: 30px;
+
+}
+.btn-all-project{
+  padding: 5px 10px;
+  color: #038BB4;
+  background: none;
+  /* padding: 7px 22px; */
+  border-radius: 10px;
+  border: 2px solid #038BB4;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 10px; 
+}
+
+a.btn-all-project:hover {
+  background: #C4C4C4;
+  font-weight: bold;
+  font-size: 18px;
+color: #038BB4; 
+}
+
+
+/* ======================================
+footer
+====================================== */
+
+#footer{
+  background: rgba(31, 38, 165, 1);
+  padding: 10px 0 0 0;
+  color: white;
+  font-size: 14px;
+  text-align: justify;
+  font-weight:lighter;
+  font-family: Tinos;
+}
+#footer .footer-top{
+  background: linear-gradient(rgba(31, 38, 165, 0.45), rgba(31, 38, 165, 0.45))
+  /* background-image: linear-gradient(rgba(59, 220, 242, 0.5), rgba(59, 220, 242, 0.5)), url("../img/hero-background.png"); */
+    
+  /* padding: 60px 0 30px 0; */
+}
+.footer-about h4{
+  padding-left: 40px;
+  font-size: 36px;
+  font-weight:lighter;
+}
+
+
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+.footer-update ul li{
+  text-align: justify;
+}
+
+.footer-update h4{
+  padding-left: 40px;
+}
+
+.footer-link h4{
+  padding-left: 40px;
+}
+.footer-link p{
+  padding-left: 40px;
+}
+
+#footer ul li{
+  list-style: none;
+  cursor: pointer;
+  margin: 0px;
+}
+#footer .footer-link ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+#footer h4{
+  color: #3BDCF2;
+  font-weight: lighter;
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-update ul li{
+  padding-bottom: 10px;
+}
+
+
+
+#footer .footer-top .social-links a {
+  font-size: 23px;
+  display: inline-block;
+  background: #3BDCF2;
+  color: #1F26A5;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+
+
+
+
+
+#footer .copyright{
+  margin-top: 20px;
+ height: 80px;
+ color: #fff;
+ text-align: left;
+ padding-top:20px;
+ width: 100%;
+}
+.copyright a{
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+
+}
+
+label{
+  color: #038BB4;
+  font-family: 'Ubuntu', sans-serif;
+  font-size:14px;
+}
+.required {
+  color: red;
+}
+
+
+
+  
+  
+/* MEDIA QUERY */
+
+@media all and (max-width:991px) {
+  #header {
+    background: transparent;
+  }
+
+  #nav-menu-container {
+    display: none;
+  }
+
+  #mobile-nav-toggle {
+    display: inline;
+  }
+  .fa.fa-bars::before{
+    border-radius: 25%; 
+    border: 2px solid #038BB4;
+    padding: 10px;
+  }
+  #logo img{
+    width: 65%;
+  }  
+}
+
+
+/* Home screen */
+
+@media (min-width: 300px) and (max-width: 767.98px){
+  #hero{
+    height: 90vh;
+    background-size: cover;
+    position: relative;
+    top: 10vh;
+    /* width: 100%; */
+  }
+  #hero h5{
+    position: relative !important;
+    font-size: 36px;
+    bottom: 100%;
+    left:3% !important;
+   }
+
+  #hero-about{
+    height: 50vh;
+    background-size: cover;
+    position: relative;
+    top: 15vh;
+    
+  }
+
+  #hero-about h5{
+    font-size: 30px;
+    bottom: 100%;
+    left:3% !important;
+    /* width: 170%;   */
+  }
+
+  #about .section-header{
+    padding-top: 100px;
+  }
+
+  #about p{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+
+  
+
+  #companies{
+    padding-top: 30%;
+  }
+  #subscribe h2{
+    font-size: 20px;
+  }
+   
+ .input{
+  padding:0;
+  margin:0;
+  width: 200%;
+  text-align: center;
+ 
+  }
+  
+  button{
+  width: 50%;
+  font-size:18px;
+  font-weight:700; 
+  background: #038BB4;
+  border: 1px solid #FFF;
+  margin-top: 15px;
+  }
+  /* .footer-update h4{
+    left: 40px;
+  } */
+  
+}
+textarea{
+  width: 100%;
+
+}
+
+.footer-about p{
+  padding-left: 40px;
+}
+
+.footer-about h4{
+  padding-left: 40px;
+  font-size: 9px;
+}
+
+@media (max-width: 1199px) {
+    #header .container {
+      max-width: 100%;
+    }
+    .nav-menu a {
+      padding: 8px 4px;
+    } 
+    .copyright a{
+      padding-left: 40px;
+      font-size: 11px; 
+    }   
+  }
+  
+
+
+  
+  
